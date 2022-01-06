@@ -13,3 +13,15 @@
 
 # Input : n = 13
 # Output : False
+
+def isPowerOfTwo(n):
+    if(n == 2):
+        return True
+    else:
+        if(n % 2 == 0):
+            return isPowerOfTwo(n / 2)
+        else:
+            return False
+
+n = 4096
+print(isPowerOfTwo(n))
